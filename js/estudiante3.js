@@ -1,4 +1,3 @@
-
 // Función asíncrona que consume la API usando fetch()
 async function obtenerProductos() {
     try {
@@ -8,7 +7,7 @@ async function obtenerProductos() {
         const data = await response.json();
 
         // Detectar productos de "tecnología" de forma más flexible usando palabras clave
-        const keywords = ['lap', 'smart', 'phone', 'tablet', 'mobile', 'accessory', 'camera', 'headphone', 'speaker', 'monitor', 'tv', 'electronics', 'console'];
+        const keywords = ['phone', 'tablet', 'mobile', 'camera', 'tv', 'electronics'];
 
         const productosTech = (data.products || []).filter(p => {
             const cat = (p.category || '').toLowerCase();
